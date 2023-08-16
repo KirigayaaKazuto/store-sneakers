@@ -1,0 +1,64 @@
+@import './../../styles/_vars.scss';
+
+header {
+  padding: 43px 45px;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #EAEAEA;;
+  .headerLeft {
+     display: flex;
+     align-items: center;
+     column-gap: 16px;
+     &-img{
+        width: 40px;
+        height: 40px;
+     }
+  }
+  .headerInfo {
+     & h3 {
+      color: $textColor;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+     }
+     
+     & p {
+        color: #9D9D9D;
+        font-size: 14px;
+        font-weight: 400;
+     }
+  }
+
+  .headerRight {
+     display: flex;
+     column-gap: 45px;
+
+     & li {
+      display: flex;
+      cursor: pointer;
+         
+     }
+     
+     &-backet {
+        column-gap: 10px;
+     }
+
+     &-backet__title{
+        color: $colorGrey;
+        font-size: 14px;
+        font-weight: 600;
+     }
+  }
+
+}
+
+.favoriteImg {
+   position: relative;
+   top: 3px;
+}
+
+.orderImg {
+   position: relative;
+   top: 2px;
+}

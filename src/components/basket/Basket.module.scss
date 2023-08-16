@@ -1,0 +1,178 @@
+@import './../../styles/vars.scss';
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &Visible{
+   visibility: visible;
+   opacity: 1;
+  }
+
+  &Hidden{
+   visibility: hidden;
+   opacity: 0;
+  }
+}
+
+.basket {
+   //transform: rotateX(100%);
+   
+  &Column{
+     display: flex;
+     justify-content: space-between;
+  }
+  
+  
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  right: 0;
+  width: 385px;
+  min-height: 600px;
+  max-height: 100%;
+  background: #FFF;
+  box-shadow: -10px 4px 24px 0px rgba(0, 0, 0, 0.10);
+
+  padding: 32px 30px 0 30px;
+
+  &Name {
+     color: #000;
+     font-size: 24px;
+     font-weight: 700;
+     line-height: 29px;
+  }
+
+  &Items {
+     overflow-y: auto;
+     flex: 1;
+     margin-top: 30px;
+     display: flex;
+     flex-direction: column;
+     row-gap: 20px;
+     min-height: 450px;
+  }
+
+  &Item {
+
+     width: 325px;
+     height: 119px;
+
+     display: flex;
+     justify-content: space-between;
+
+     border-radius: 20px;
+     border: 1px solid #F3F3F3;
+     background: #FFF;
+
+     &Images {
+        width: 70px;
+        height: 70px;
+        margin: 20px 0 0 20px;
+     }
+
+     &Btn {
+        width: 32px;
+        height: 32px;
+        margin: 44px 20px 0 0;
+     }
+  }
+
+  &Info {
+     margin-top: 30px;
+     display: flex;
+     flex-direction: column;
+     row-gap: 8px;
+     &Name {
+        max-width: 150px;
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: normal;
+     }
+
+     b {
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: normal;
+     }
+  }
+}
+
+.basketPrice {
+  margin-top: 25px;
+  li {
+     display: flex;
+     align-items: flex-end;
+     column-gap: 9px;
+
+     margin-bottom: 20px;
+
+     max-width: 325px;
+
+     span{
+        color: $textColor;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+     }
+
+     b {
+        color: $textColor;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19px;
+     }
+
+     div {
+        position: relative;
+        top: -5px;
+        flex: 1;
+        flex-direction:row-reverse;
+        height: 1px;
+        border: 1px dashed #DFDFDF;
+     }
+  } 
+
+}
+
+.basketTotalBlock {
+  margin-bottom: 20px;
+
+  button {
+     color: #FFF;
+     font-size: 16px;
+     font-weight: 600;
+     line-height: normal;
+
+     width: 325px;
+     padding: 18px 0;
+     margin: 0 auto;
+     border-radius: 18px;
+     background: #9DD458;
+     transition: background 0.1s ease-in-out;
+
+     &:disabled {
+      background: #bebebe;
+     }
+   
+     &:hover {
+        background: lighten(#9DD458, 5%);
+     }
+
+     &:active {
+        background: darken(#9DD458, 5%);
+     }
+  }
+}
