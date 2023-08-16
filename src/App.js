@@ -59,7 +59,7 @@ import { Order } from "./pages/order/Order";
         }
       } catch (error){
           console.warn(error)
-          alert('Ошибка добавления в корзину')
+          alert('Ошибка добавления в корзину!!!')
         }
     }
 
